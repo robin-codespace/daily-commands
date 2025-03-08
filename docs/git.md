@@ -1,41 +1,73 @@
-# Common Git Commands
+# Most Frequently Used Git Commands
 
-Here are the most frequently used Git commands in daily work:
+Here are the some Git commands which in my opinion are import:
 
-## git pull
-Fetches changes from a remote repository and merges them into your current branch.
+## git status
+Shows the state of your working directory and staging area.
+Examples:
+- `git status` - Show current status
+- `git status -s` - Show status in short format
 
 ## git add
-Stages changes for commit. You can add specific files or use `git add .` to stage all changes.
+Stages changes for commit.
+Examples:
+- `git add file.txt` - Stage a specific file
+- `git add .` - Stage all changes
+- `git add -p` - Interactively stage changes
 
-## git stash
-Temporarily saves uncommitted changes so you can switch branches or perform other operations.
-Common usage:
-- `git stash save "message"` - Stash changes with a description
-- `git stash pop` - Apply and remove the latest stash
-- `git stash list` - View all stashed changes
-- `git stash drop` - Removes the most recent stash entry
-
-## git diff
-Shows differences between working directory, staging area, and committed code:
-- `git diff` - Shows unstaged changes
-- `git diff --staged` - Shows staged changes
-- `git diff branch1 branch2` - Compare two branches
-
-## git push
-Uploads your local commits to a remote repository.
-Common usage: `git push origin branch-name`
+## git restore
+- `git restore .` - Restore all changes
+- `git restore --staged file.txt` - Restore a specific file (Git 2.23+)
 
 ## git commit
 Creates a new commit with your staged changes.
-Best practices:
-- Write clear commit messages
-- Use `git commit -m "message"` for simple commits
-- Use `git commit` for detailed commit messages
+Examples:
+- `git commit -m "Add feature"` - Quick commit with message
+- `git commit` - Opens editor for detailed message
+- `git commit -am "Fix bug"` - Stage tracked files and commit
+
+## git pull
+Updates your current branch with remote changes.
+Examples:
+- `git pull origin main` - Pull from main branch
+- `git pull --rebase` - Pull and rebase local changes
+
+## git push
+Uploads your commits to remote repository.
+Examples:
+- `git push origin main` - Push to main branch
+- `git push -u origin feature` - Push new branch and set upstream
+
+## git branch
+Manages branches in your repository.
+Examples:
+- `git branch` - List local branches
+- `git branch -a` - List all branches including remote
+- `git branch -d branch-name` - Delete a branch
 
 ## git checkout
-Switches between branches or restores working tree files.
-Common usage:
-- `git checkout branch-name` - Switch to an existing branch
-- `git checkout -b new-branch` - Create and switch to a new branch
-- `git checkout file-name` - Discard changes in working directory
+Switches branches or restores files.
+Examples:
+- `git checkout main` - Switch to main branch
+- `git checkout -b feature` - Create and switch to new branch
+- `git checkout file.txt` - Discard file changes
+
+## git merge
+Combines changes from different branches.
+Examples:
+- `git merge feature` - Merge feature branch into current branch
+- `git merge --abort` - Abort a problematic merge
+
+## git log
+Shows commit history.
+Examples:
+- `git log` - Show commit history
+- `git log --oneline` - Compact commit history
+- `git log --graph` - Show branch and merge history
+
+## git stash
+Temporarily stores uncommitted changes.
+Examples:
+- `git stash` - Quick stash
+- `git stash pop` - Apply and remove latest stash
+- `git stash list` - Show all stashes
