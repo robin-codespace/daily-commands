@@ -15,9 +15,13 @@ Examples:
 - `git add .` - Stage all changes
 - `git add -p` - Interactively stage changes
 
-## git restore
+## git restore (only worked for staged changes)
 - `git restore .` - Restore all changes
 - `git restore --staged file.txt` - Restore a specific file (Git 2.23+)
+
+## git reset
+- `git reset HEAD~1` - to undo the last commit while keeping the changes
+- `git reset --hard HEAD~1` - completely discared the last commit and its changes
 
 ## git commit
 Creates a new commit with your staged changes.
