@@ -54,3 +54,30 @@ Examples:
 - `scp -i /path/to/key.pem file.txt username@hostname:/path/to/dest` - Copy local file to remote using private key
 - `scp username@hostname:/path/to/file.txt .` - Copy remote file to local
 - `scp -r folder username@hostname:/path/to/dest` - Copy entire directory
+
+
+## Check port in use
+Check which process is using a specific port number.
+Examples:
+- `lsof -i:8080` - List all processes using port 8080 (lsof = "list open files")
+- `netstat -tuln | grep 8080` - Show TCP/UDP listening ports and filter for port 8080
+  - -t: TCP ports
+  - -u: UDP ports 
+  - -l: Only listening ports
+  - -n: Show port numbers instead of names
+
+## head
+Output the first part of files.
+Examples:
+- `head example.txt` - Show first 10 lines by default
+- `head -n 5 example.txt` - Show first 5 lines
+- `head -n 5 example.txt > first_5_lines.txt` - Save first 5 lines to a new file
+
+## tail 
+Output the last part of files. Commonly used to follow log files.
+Examples:
+- `tail example.txt` - Show last 10 lines by default
+- `tail -n 5 example.txt` - Show last 5 lines
+- `tail -n 5 example.txt > last_5_line.txt` - Save last 5 lines to a new file
+- `tail -f example.txt` - Follow file content in real-time as it grows
+- `tail -f -n 100 example.txt` - Follow file and show last 100 lines initially
