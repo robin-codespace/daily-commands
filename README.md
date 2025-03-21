@@ -11,3 +11,9 @@ A collection of most frequently used Git commands, including branch management, 
 ### [Common Command Line Tools](docs/grocery.md)
 Documentation for basic but essential command line utilities like pwd, cd, ls and more.
 
+### [Tools I Also Use](docs/tools.md)
+Demostrate some commands tools that I use and in my opinion are practical.
+
+### [Dokcer](docs/docker/docker.md)
+Some often used docker related commands.
+

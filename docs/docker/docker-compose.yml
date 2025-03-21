@@ -1,0 +1,22 @@
+version: '1.0'
+
+services:
+  backend:
+    platform: linux/arm64
+    container_name: backend-api
+    build: 
+      dockerfile: ./Dockerfile
+      context: .
+      args:
+        - MAVEN_USERNAME=${MAVEN_USERNAME}
+        - MAVEN_PASSWORD=${MAVEN_PASSWORD}
+    depends_on:
+      - database
+  database:
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=db
+      - USER=admin
+      - PASSWORD=secret
+    ports:
+      - "3306:3306"
